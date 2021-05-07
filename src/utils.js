@@ -1,7 +1,6 @@
 import React from "react";
 import numeral from "numeral";
 import { Circle, Popup } from "react-leaflet";
-import InfoBox from "./InfoBox";
 import { Typography } from "@material-ui/core";
 
 /**
@@ -43,19 +42,19 @@ export const showDataOnMap = (data, casesType) => {
             </Typography>
 
             <div
-              className={casesType == "cases" ? "cases bold" : "unbold"}
+              className={casesType === "cases" ? "cases bold" : "unbold"}
               style={{ color: casesTypeColors["cases"]["hex"] }}
             >
               Cases: {numeral(country.cases).format("0,0")}
             </div>
             <div
-              className={casesType == "recovered" ? "recovered bold" : "unbold"}
+              className={casesType === "recovered" ? "recovered bold" : "unbold"}
               style={{ color: casesTypeColors["recovered"]["hex"] }}
             >
               Recovered: {numeral(country.recovered).format("0,0")}
             </div>
             <div
-              className={casesType == "deaths" ? "deaths bold" : "unbold"}
+              className={casesType === "deaths" ? "deaths bold" : "unbold"}
               style={{ color: casesTypeColors["deaths"]["hex"] }}
             >
               Death: {numeral(country.deaths).format("0,0")}

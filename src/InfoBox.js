@@ -2,7 +2,7 @@
 import React from "react";
 import "./InfoBox.css";
 import { printNumeralStat } from "./utils";
-import { Card, CardContent, Typography, image } from "@material-ui/core";
+import { Card, CardContent, Typography} from "@material-ui/core";
 
 function InfoBox({ country, title, cases, total, color, ...props }) {
   return (
